@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto 1fr;
+}
+
+.sidebar {
+    grid-row: 1 / 4;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.sidebar .logo {
+    padding: 10px;
+}
+
+.sidebar .menu {
+    padding: 10px;
+}
+
+.sidebar .menu ul {
+    list-style-type: none;
+}
+
+.header {
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.main {
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.main .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main .projects .project-card {
+    border: 1px solid black;
+}
+
+.main .side-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main .side-wrapper .trending-grid {
+    display: grid;
+    grid-template-rows: auto;
+}
