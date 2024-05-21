@@ -1,11 +1,39 @@
+@font-face {
+    font-family: 'robotoblack';
+    src: url('fonts/roboto-black-webfont.woff2') format('woff2'),
+         url('fonts/roboto-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'roboto';
+    box-sizing: border-box;
 }
 
 .container {
     height: 100vh;
-    padding: 10px;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: auto auto 1fr;
@@ -15,47 +43,313 @@
     grid-row: 1 / 4;
     display: grid;
     grid-template-rows: auto 1fr;
+    background-color: rgb(28,148,211);
+    color: rgb(255, 255, 255);
+}
+
+.sidebar .icon {
+    filter: invert(100%);
 }
 
 .sidebar .logo {
     padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar .logo .icon {
+    height: 2.5rem;
+    width: auto;
 }
 
 .sidebar .menu {
     padding: 10px;
+    font-size: 1em;
 }
 
 .sidebar .menu ul {
     list-style-type: none;
+    font-weight: bold;
+}
+
+.sidebar .menu li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.sidebar .menu li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: filter 0.3s;
+}
+
+.sidebar .menu li a:hover {
+    filter: invert(25%);
+}
+
+.sidebar .menu .icon {
+    height: 1.5em;
+    margin-right: 18px;
+    margin-left: 8px;
 }
 
 .header {
     grid-row: 1 / 3;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 10px 30px 15px;
+}
+
+.header .search {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+}
+
+.search .search-input {
+    border: 0px;
+    border-radius: 20px;
+    width: 90%;
+    background-color: rgba(226,232,240,1);
+    height: 2em;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.search .search-input:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(4, 26, 38, 0.5);
+}
+
+.header .search .icon {
+    height: 1.5em;
+    width: auto;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.header .search .icon:hover {
+    filter: invert(25%);
+}
+
+.search, .notifications {
+    margin-bottom: 20px;
+}
+
+.header .notifications {
+    display: grid;
+    grid-template-columns: 1fr min-content min-content ;
+    gap: 30px;
+    justify-items: end;
+    align-items: center;
+    margin-left: 50px;
+    font-weight: bolder;
+}
+
+.header .notifications .icon {
+    height: 1.5em;
+}
+
+.header .notifications .avatar-small {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header .notifications div:hover {
+    filter: invert(25%);
+    cursor: pointer;
+    
+}
+
+.header .user-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.user-info-small {
+    font-size: 12px;
+}
+
+.user-info-large {
+    font-size: 20px;
+}
+
+.user-info .avatar-normal {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header .buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 1em;
+}
+
+.buttons button {
+    border: 0px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: rgb(28,148,211);
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: rgb(12, 62, 88);
+    
 }
 
 .main {
     grid-row: 3 / 4;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    background-color: rgba(226,232,240,255);
+    padding: 20px 15px;
 }
+
 
 .main .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
+    gap: 20px;
+}
+
+.projects, .side-wrapper {
+    height: 90%;
+}
+
+.main .main-header {
+    margin-bottom: 5px;
 }
 
 .main .projects .project-card {
-    border: 1px solid black;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-left: 5px solid rgba(240,180,41,255);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.project-card h4 a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s;
+}
+
+.project-card h4 a:hover {
+    color: rgba(99,99,99,255);
+}
+
+.project-card .project-card-icons {
+    justify-self: end;
+}
+
+.project-card .project-card-icons .icon {
+    height: 1.3em;
+    margin-right: 1em;
+    transition: filter 0.3s;
+}
+
+.project-card .project-card-icons .icon:hover {
+    filter: invert(50%);
+}
+
+.project-card-info {
+    color: rgba(99,99,99,255);
+    font-size: 14px;
 }
 
 .main .side-wrapper {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    align-items: start;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    margin-left: 15px;
+}
+
+.announcements-grid, .trending-grid {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.announcements-grid .announcements-info:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+.announcements-grid .announcements-info {
+    padding: 20px 5px;
+}
+
+.announcements-grid .announcements-info:first-child {
+    padding: 0px 5px 20px;
+}
+
+.announcements-grid .announcements-info:last-child {
+    padding: 20px 5px 0px;
+}
+
+.announcements-info h5 a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s;
+}
+
+.announcements-info h5 a:hover {
+    color: rgba(99,99,99,255);
+}
+
+.announcements-info div {
+    color: rgba(99,99,99,255);
+    font-size: 12px;
 }
 
 .main .side-wrapper .trending-grid {
     display: grid;
     grid-template-rows: auto;
+}
+
+.main .side-wrapper .trending-grid .trending-info {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.trending-avatar {
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.trending-user, .trending-project{
+    font-size: 14px;
+}
+
+.trending-project {
+    color: rgba(99,99,99,255);
 }

@@ -2,143 +2,172 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
-    <title>Admin Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet">
+  <title>Admin Dashboard</title>
 </head>
 
 <body>
-    <div class="container">
+  <div class="container">
 
-        <div class="sidebar">
-            <div class="logo">
-                <h1>Dashboard</h1>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li>Home</li>
-                    <li>Profile</li>
-                    <li>Messages</li>
-                    <li>History</li>
-                    <li>Tasks</li>
-                    <li>Communities</li>
-                    <br />
-                    <li>Settings</li>
-                    <li>Support</li>
-                    <li>Privacy</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="header">
-            <div class="search">
-                Search Icon <input type="search" />
-            </div>
-            <div class="notifications">
-                <span>Notification Bell Icon</span>
-                <span>Avatar Icon</span>
-                <span>Morgan Oakley</span>
-            </div>
-            <div class="user-info">
-                <span>Avatar Icon</span>
-                <span>Hi there,</span>
-                <span>Morgan Oakley (@morgan)</span>
-            </div>
-            <div class="buttons">
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
-            </div>
-        </div>
-
-        <div class="main">
-            <div class="main-wrapper">
-                <h3>Your Projects</h3>
-                <div class="projects">
-                    <div class="project-card">
-                        <h4>Super Cool Project</h4>
-                        <span class="project-card-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
-                        <span class="project-card-icons">Star Icon Eye Icon Share Icon</span>
-                    </div>
-                    <div class="project-card">
-                        <h4>Less Cool Project</h4>
-                        <span class="project-card-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
-                        <span class="project-card-icons">Star Icon Eye Icon Share Icon</span>
-                    </div>
-                    <div class="project-card">
-                        <h4>Impossible App</h4>
-                        <span class="project-card-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
-                        <span class="project-card-icons">Star Icon Eye Icon Share Icon</span>
-                    </div>
-                    <div class="project-card">
-                        <h4>Easy Peasy App</h4>
-                        <span class="project-card-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
-                        <span class="project-card-icons">Star Icon Eye Icon Share Icon</span>
-                    </div>
-                    <div class="project-card">
-                        <h4>Ad Blocker</h4>
-                        <span class="project-card-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
-                        <span class="project-card-icons">Star Icon Eye Icon Share Icon</span>
-                    </div>
-                    <div class="project-card">
-                        <h4>Money Maker</h4>
-                        <span class="project-card-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
-                        <span class="project-card-icons">Star Icon Eye Icon Share Icon</span>
-                    </div>
-                </div>
-            </div>
-            <div class="side-wrapper">
-                <div class="announcements">
-                    <h3>Announcements</h3>
-                    <div class="announcements-grid">
-                        <div class="announcements-info">
-                            <h6>Site Maintenance</h6>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
-                        </div>
-                        <div class="announcements-info">
-                            <h6>Community Share Day</h6>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
-                        </div>
-                        <div class="announcements-info">
-                            <h6>Updated Privacy Policy</h6>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trending">
-                    <h3>Trending</h3>
-                    <div class="trending-grid">
-                        <div class="trending-info">
-                            <span>User Icon Avatar</span>
-                            <span>@tegan
-                                World Peace Builder
-                            </span>
-                        </div>
-                        <div class="trending-info">
-                            <span>User Icon Avatar</span>
-                            <span>@morgan
-                                Super Cool Project
-                            </span>
-                        </div>
-                        <div class="trending-info">
-                            <span>User Icon Avatar</span>
-                            <span>@kendall
-                                Life Changing App
-                            </span>
-                        </div>
-                        <div class="trending-info">
-                            <span>User Icon Avatar</span>
-                            <span>@alex
-                                No Traffic Maker
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="sidebar">
+      <div class="logo">
+        <img src="icons/view-dashboard.svg" alt="Home" class="icon">
+        <h2>Dashboard</h2>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#"><img src="icons/home.svg" alt="Home" class="icon"> Home</a></li>
+          <li><a href="#"><img src="icons/account-edit.svg" alt="Profile" class="icon"> Profile</a></li>
+          <li><a href="#"><img src="icons/message.svg" alt="Messages" class="icon"> Messages</a></li>
+          <li><a href="#"><img src="icons/history.svg" alt="History" class="icon"> History</a></li>
+          <li><a href="#"><img src="icons/file-multiple.svg" alt="Tasks" class="icon"> Tasks</a></li>
+          <li><a href="#"><img src="icons/account-group.svg" alt="Communities" class="icon"> Communities</a></li>
+          <br />
+          <li><a href="#"><img src="icons/cog.svg" alt="Settings" class="icon"> Settings</a></li>
+          <li><a href="#"><img src="icons/head-question.svg" alt="Support" class="icon"> Support</a></li>
+          <li><a href="#"><img src="icons/shield-check.svg" alt="Privacy" class="icon"> Privacy</a></li>
+        </ul>
+      </div>
     </div>
+
+    <div class="header">
+      <div class="search">
+        <img src="icons/magnify.svg" alt="Search" class="icon">
+        <input type="search" class="search-input" />
+      </div>
+      <div class="notifications">
+        <div><img src="icons/bell-ring-outline.svg" alt="Notifications" class="icon"></div>
+        <div><img src="img/longhorn.jpg" alt="Avatar, small" class="avatar-small"></div>
+        <div>Morgan Oakley</div>
+      </div>
+      <div class="user-info">
+        <img src="img/longhorn.jpg" alt="Avatar, normal" class="avatar-normal">
+        <div>
+          <span class="user-info-small">Hi there,</span> <br />
+          <span class="user-info-large">Morgan Oakley (@morgan)</span>
+        </div>
+      </div>
+      <div class="buttons">
+        <button>New</button>
+        <button>Upload</button>
+        <button>Share</button>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="main-wrapper">
+        <h3 class="main-header">Your Projects</h3>
+        <div class="projects">
+          <div class="project-card">
+            <h4><a href="#">Super Cool Project</a></h4>
+            <span class="project-card-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</span>
+            <div class="project-card-icons">
+              <a href="#"><img src="icons/star-plus-outline.svg" alt="Favorite" class="icon"></a>
+              <a href="#"><img src="icons/eye-plus-outline.svg" alt="Enhance" class="icon"></a>
+              <a href="#"><img src="icons/share-variant-outline.svg" alt="Share" class="icon"></a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h4><a href="#">Less Cool Project</a></h4>
+            <span class="project-card-info">Porttitor massa id neque aliquam vestibulum morbi blandit cursus... </span>
+            <div class="project-card-icons">
+              <a href="#"><img src="icons/star-plus-outline.svg" alt="Favorite" class="icon"></a>
+              <a href="#"><img src="icons/eye-plus-outline.svg" alt="Enhance" class="icon"></a>
+              <a href="#"><img src="icons/share-variant-outline.svg" alt="Share" class="icon"></a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h4><a href="#">Impossible App</a></h4>
+            <span class="project-card-info">Maecenas volutpat blandit aliquam etiam erat velit scelerisque in... </span>
+            <div class="project-card-icons">
+              <a href="#"><img src="icons/star-plus-outline.svg" alt="Favorite" class="icon"></a>
+              <a href="#"><img src="icons/eye-plus-outline.svg" alt="Enhance" class="icon"></a>
+              <a href="#"><img src="icons/share-variant-outline.svg" alt="Share" class="icon"></a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h4><a href="#">Easy Peasy App</a></h4>
+            <span class="project-card-info">Duis ut diam quam nulla porttitor massa id neque aliquam... </span>
+            <div class="project-card-icons">
+              <a href="#"><img src="icons/star-plus-outline.svg" alt="Favorite" class="icon"></a>
+              <a href="#"><img src="icons/eye-plus-outline.svg" alt="Enhance" class="icon"></a>
+              <a href="#"><img src="icons/share-variant-outline.svg" alt="Share" class="icon"></a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h4><a href="#">Ad Blocker</a></h4>
+            <span class="project-card-info">Aliquam ultrices sagittis orci a scelerisque purus semper. Risus feugiat in ante metus dictum at tempor commodo ullamcorper... </span>
+            <div class="project-card-icons">
+              <a href="#"><img src="icons/star-plus-outline.svg" alt="Favorite" class="icon"></a>
+              <a href="#"><img src="icons/eye-plus-outline.svg" alt="Enhance" class="icon"></a>
+              <a href="#"><img src="icons/share-variant-outline.svg" alt="Share" class="icon"></a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h4><a href="#">Money Maker</a></h4>
+            <span class="project-card-info">Dui vivamus arcu felis bibendum ut tristique. Sit amet commodo nulla facilisi nullam vehicula ipsum a arcu...</span>
+            <div class="project-card-icons">
+              <a href="#"><img src="icons/star-plus-outline.svg" alt="Favorite" class="icon"></a>
+              <a href="#"><img src="icons/eye-plus-outline.svg" alt="Enhance" class="icon"></a>
+              <a href="#"><img src="icons/share-variant-outline.svg" alt="Share" class="icon"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="side-wrapper">
+        <div class="announcements">
+          <h3 class="main-header">Announcements</h3>
+          <div class="announcements-grid">
+            <div class="announcements-info">
+              <h5><a href="#">Site Maintenance</a></h5>
+              <div>Elit sed vulputate mi sit amet mauris commodo... </div>
+            </div>
+            <div class="announcements-info">
+              <h5><a href="#">Community Share Day</a></h5>
+              <div>Ultrices vitae auctor eu augue ut lectus arcu bibendum... </div>
+            </div>
+            <div class="announcements-info">
+              <h5><a href="#">Updated Privacy Policy</a></h5>
+              <div>Malesuada fames ac turpis egestas sed tempus. Et egestas quis ipsum suspendisse ultrices... </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="trending">
+          <h3 class="main-header">Trending</h3>
+          <div class="trending-grid">
+            <div class="trending-info">
+              <img src="img/cow-1.jpg" alt="@tegan" class="trending-avatar">
+              <div><span class="trending-user">@tegan </span><br />
+                <span class="trending-project">World Peace Builder</span>
+              </div>
+            </div>
+            <div class="trending-info">
+              <img src="img/longhorn.jpg" alt="@morgan" class="trending-avatar">
+              <div>
+                <span class="trending-user">@morgan </span><br />
+                <span class="trending-project">Super Cool Project</span>
+              </div>
+            </div>
+            <div class="trending-info">
+              <img src="img/cow-2.jpg" alt="@kendall" class="trending-avatar">
+              <div><span class="trending-user">@kendall </span><br />
+                <span class="trending-project">Life Changing App</span>
+              </div>
+            </div>
+            <div class="trending-info">
+              <img src="img/cow-3.jpg" alt="@alex" class="trending-avatar">
+              <div><span class="trending-user">@alex </span><br />
+                <span class="trending-project">No Traffic Maker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 
